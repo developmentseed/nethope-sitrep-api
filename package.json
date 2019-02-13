@@ -5,7 +5,9 @@
   "scripts": {
     "create-db": "db/scripts/create_db.sh",
     "setup-db": "db/scripts/setup_db.sh",
-    "drop-db": "db/scripts/drop_db.sh"
+    "drop-db": "db/scripts/drop_db.sh",
+    "seed": "node db/scripts/populate.js examples",
+    "start": "postgrest api.conf"
   },
   "repository": "git@github.com:developmentseed/nethope-sitrep-api.git",
   "author": "Drew Bollinger <drew@developmentseed.org>",
