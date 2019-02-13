@@ -1,0 +1,20 @@
+{
+  "name": "nethope-sitrep-api",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "create-db": "db/scripts/create_db.sh",
+    "setup-db": "db/scripts/setup_db.sh",
+    "drop-db": "db/scripts/drop_db.sh"
+  },
+  "repository": "git@github.com:developmentseed/nethope-sitrep-api.git",
+  "author": "Drew Bollinger <drew@developmentseed.org>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "glob": "^7.1.3",
+    "knex": "^0.16.3",
+    "pg": "^7.8.0"
+  }
+}
