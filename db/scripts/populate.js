@@ -6,8 +6,7 @@ const ENDPOINT = process.env.ENDPOINT
 
 glob(`${process.argv[2]}/*.ipynb`, (err, files) => {
   Promise.all(files.map(file => {
-    const content = fs.readFileSync(file).toString()
-    const parsedContent = JSON.parse(content)
+    const content = JSON.parse(fs.readFileSync(file).toString())
     const fileObject = {
       content,
       name: 'Untitled',
@@ -16,6 +15,6 @@ glob(`${process.argv[2]}/*.ipynb`, (err, files) => {
     }
     return axios.post(`${ENDPOINT}/reports`, fileObject, {
       headers : {'Content-Type': 'application/json'}
-    })
+    }).catch(err => console.error(err.response.data))
   })).then(results => console.log(`Wrote ${results.length} reports`))
 })
