@@ -1,0 +1,6 @@
+default:
+  stackName: nethope-sitrep
+  stage: test
+  rds:
+    username: '{{RDS_USERNAME}}'
+    password: '{{RDS_PASSWORD}}'
