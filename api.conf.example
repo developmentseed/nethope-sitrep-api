@@ -1,7 +1,8 @@
 db-uri = "postgres://postgres@localhost/sitrep_test"
 db-schema = "public" # this schema gets added to the search_path of every request
-db-anon-role = "postgres"
+db-anon-role = "web_anon"
 db-pool = 10
 
 server-host = "127.0.0.1"
 server-port = 3000
+jwt-secret = "secret_goes_here"
